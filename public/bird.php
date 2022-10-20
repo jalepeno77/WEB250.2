@@ -1,4 +1,5 @@
 <?php require_once('../private/initialize.php'); ?>
+<?php require_once('../private/classes/bird.class.php'); ?>
 
 <?php $page_title = 'Birds'; ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
@@ -22,24 +23,23 @@
         <th>Behavior</th>
         <th>Conservation Level</th>
         <th>Backyard Tips</th>
+        <th>Details</th>
       </tr>
-<?php
 
-$parser = new parsecsv(PRIVATE_PATH . '/wnc-birds.csv');
-$bird_array = $parser->parse();
+<?php $birds = Bird::find_all();?>
 
+<!-- $parser = new parsecsv(PRIVATE_PATH . '/wnc-birds.csv');
+$bird_array = $parser->parse(); -->
 
-?>
-      <?php foreach($bird_array as $args) { 
+      <?php foreach($birds as $bird) { 
         $bird = new Bird($args);?>
       <tr>
         <td><?php echo h($bird->commonName); ?></td>
         <td><?php echo h($bird->habitat); ?></td>
         <td><?php echo h($bird->food); ?></td>
-        <td><?php echo h($bird->nestPlacement); ?></td>
-        <td><?php echo h($bird->behavior); ?></td>
         <td><?php echo h($bird->conservation()); ?></td>
         <td><?php echo h($bird->backyardTips); ?></td>
+        <td><a href="detail.php?id=<?php echo $bird->id; ?>">View</a></td>
       </tr>
       <?php } ?>
       </table>

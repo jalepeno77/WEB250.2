@@ -11,7 +11,8 @@
   define("WWW_ROOT", $doc_root);
 
   require_once('functions.php');
-  require_once('classes/parsecsv.class.php');
+  require_once('db_credentials.php');
+  require_once('db_functions.php');
 
   // -> All classes in directory
   foreach(glob('classes/*.class.php') as $file) {
@@ -26,7 +27,7 @@
   }
   spl_autoload_register('my_autoload');
 
-  // $database = db_connect();
-  // Bird::set_database($database);
+  $database = db_connect();
+  Bird::set_database($database);
 
 ?>
