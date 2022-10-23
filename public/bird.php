@@ -31,14 +31,13 @@
 <!-- $parser = new parsecsv(PRIVATE_PATH . '/wnc-birds.csv');
 $bird_array = $parser->parse(); -->
 
-      <?php foreach($birds as $bird) { 
-        $bird = new Bird($args);?>
+      <?php foreach($birds as $bird) { ?>
       <tr>
-        <td><?php echo h($bird->commonName); ?></td>
+        <td><?php echo h($bird->common_name); ?></td>
         <td><?php echo h($bird->habitat); ?></td>
         <td><?php echo h($bird->food); ?></td>
         <td><?php echo h($bird->conservation()); ?></td>
-        <td><?php echo h($bird->backyardTips); ?></td>
+        <td><?php echo h($bird->backyard_tips); ?></td>
         <td><a href="detail.php?id=<?php echo $bird->id; ?>">View</a></td>
       </tr>
       <?php } ?>

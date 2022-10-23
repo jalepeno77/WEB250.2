@@ -11,6 +11,6 @@
     
 </div>
 
-<?php $super_hero_image = 'AdobeStock_18040381_xlarge.jpeg'; ?>
+<?php $super_hero_image = 'images/tufted-titmouse.jpg'; ?>
 
 <?php include(SHARED_PATH . '/public_footer.php'); ?> -->
