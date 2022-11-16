@@ -33,7 +33,7 @@
 
   // -> Individually
   require_once('classes/DatabaseObject.class.php');
-  require_once('classes/bird.class.php');
+  require_once('classes/Bird.class.php');
 
   // -> All classes in directory
   foreach(glob('classes/*.class.php') as $file) {
@@ -49,6 +49,6 @@
   // spl_autoload_register('my_autoload');
 
   $database = db_connect();
-  DatabaseObject::set_database($database);
+  Bird::set_database($database);
   
 ?>
