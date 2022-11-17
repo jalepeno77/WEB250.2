@@ -5,29 +5,15 @@ CREATE TABLE `admins` (
   `last_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `user_level` enum('a','m') NOT NULL,
   `hashed_password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT 
 CHARSET=utf8;
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `user_level` enum('a','m') NOT NULL,
-  `hashed_password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `index_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+INSERT INTO `admins` VALUES (1,'Kevin','Skoglund','kevin@somewhere.com','kskoglund', '$2y$10$74202tWuILkLIEKyAUKR/ejEmtXUjwIV3XWlWz.BeRpSgOtZAC0FS');
 
-INSERT INTO `admins` VALUES (1,'Kevin','Skoglund','kevin@somewhere.com','kskoglund', 'a', '$2y$10$74202tWuILkLIEKyAUKR/ejEmtXUjwIV3XWlWz.BeRpSgOtZAC0FS');
-
-INSERT INTO `admins` VALUES (2,'Joseph','Lopez','joseph@somewhere.com', 'jolo', 'a', 'secretpassword');
+INSERT INTO `admins` VALUES (2,'Joseph','Lopez','joseph@somewhere.com', 'jolo', 'secretpassword');
 
 DROP TABLE IF EXISTS `bicycles`;
 CREATE TABLE `bicycles` (

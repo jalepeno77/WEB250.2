@@ -50,7 +50,6 @@
   $database = db_connect();
   Bicycle::set_database($database);
 
-  Admin::set_database($database);
   $session = new Session;
 
 ?>
