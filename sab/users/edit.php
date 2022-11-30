@@ -16,7 +16,7 @@ if($user == false) {
 if(is_post_request()) {
 
   // Save record using post parameters
-  $args = $_POST['users'];
+  $args = $_POST['user'];
   $user->merge_attributes($args);
   $result = $user->save();
 
@@ -36,7 +36,7 @@ if(is_post_request()) {
 ?>
 
 <?php $page_title = 'Edit user'; ?>
-<?php include(SHARED_PATH . '/staff_header.php'); ?>
+<?php include(SHARED_PATH . '/user_header.php'); ?>
 
   <a class="back-link" href="<?php echo url_for('/users/index.php'); ?>">&laquo; Back to List</a>
 

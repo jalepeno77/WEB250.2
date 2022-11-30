@@ -23,8 +23,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT 
 CHARSET=utf8;
 
-INSERT INTO `users` VALUES (1,'Joseph','Lopez','joseph@somewhere.com', 'jolo', 'secretpassword');
-
 DROP TABLE IF EXISTS birds;
 CREATE TABLE birds (
   id int(11) NOT NULL AUTO_INCREMENT,

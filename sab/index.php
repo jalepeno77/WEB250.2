@@ -35,6 +35,7 @@ include(SHARED_PATH . '/public_header.php');
           <td><?php echo h($bird->food); ?></td>
           <td><?php echo h($bird->conservation()); ?></td>
           <td><?php echo h($bird->backyard_tips); ?></td>
+
           <?php if($session->is_logged_in()) {
             echo '<td><a class ="action" href="' . url_for('/birds/show.php?id=' . h(u($bird->id))) . '">View</a></td>';
             echo '<td><a class ="action" href="' . url_for('/birds/edit.php?id=' . h(u($bird->id))) . '">Edit</a></td>';
