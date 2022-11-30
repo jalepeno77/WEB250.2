@@ -17,16 +17,6 @@
       </h1>
     </header>
 
-    <navigation>
-      <ul>
-        <?php if($session->is_logged_in()) { ?>
-        <li>User: <?php echo $session->username; ?></li>
-        <li><a href="<?php echo url_for('/user/index.php'); ?>">Menu</a></li>
-        <li><a href="<?php echo url_for('/logout.php'); ?>">Logout</a></li>
-        <?php } ?>
-      </ul>
-    </navigation>
-
     <p>Welcome to the Southern Appalachian Bird site.</p>
   
     <navigation>

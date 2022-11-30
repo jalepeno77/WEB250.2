@@ -2,8 +2,6 @@
 
 require_once('../private/initialize.php');
 
-require_login();
-
 if(is_post_request()) {
 
   // Create record using post parameters
@@ -27,7 +25,7 @@ if(is_post_request()) {
 ?>
 
 <?php $page_title = 'Create User'; ?>
-<?php include(SHARED_PATH . '/staff_header.php'); ?>
+<?php include(SHARED_PATH . '/user_header.php'); ?>
 
 <div id="content">
 
@@ -51,4 +49,4 @@ if(is_post_request()) {
 
 </div>
 
-<?php include(SHARED_PATH . '/staff_footer.php'); ?>
+<?php include(SHARED_PATH . '/user_footer.php'); ?>

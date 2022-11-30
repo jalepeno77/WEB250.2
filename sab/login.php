@@ -48,7 +48,8 @@ if(is_post_request()) {
     <input type="text" name="username" value="<?php echo h($username); ?>" /><br />
     Password:<br />
     <input type="password" name="password" value="" /><br />
-    <input type="submit" name="submit" value="Submit User"  />
+    <input type="submit" name="submit" value="Login User"  />
+    <a href="users/new.php">Create Account</a>
   </form>
 
 </div>

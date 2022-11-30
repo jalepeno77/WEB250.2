@@ -22,6 +22,7 @@
         <th>&nbsp;</th>
       </tr>
 
+
       <?php foreach($users as $user) { ?>
         <tr>
           <td><?= h($user->id); ?></td>
@@ -32,6 +33,7 @@
           <td><a href="<?= url_for('users/show.php?id=' . h(u($user->id))); ?>">View</a></td>
           <td><a href="<?= url_for('users/edit.php?id=' . h(u($user->id))); ?>">Edit</a></td>
           <td><a href="<?= url_for('users/delete.php?id=' . h(u($user->id))); ?>">Delete</a></td>
+          }
     	  </tr>
       <?php } ?>
   	</table>
